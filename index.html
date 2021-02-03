@@ -11,128 +11,100 @@
   <meta name="description" content="game, memory game, concentration, puzzle, help me think, remember, games, gammer" />
      <!-- Styles applied to elements on this page -->
     <link rel="stylesheet" href="assets/style.css" type="text/css"/> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
  <body>
-    <!-- HTML here -->
-<body>
-      <!--Header Welcome note-->
-      <h1>Memory Memory</h1>
-      <!--Level Section-->
-      <div class="row">
-         <h2> Level 1</h2>
-      </div>
-    <!-- Game Section -->
-    <div class="container">
-          <div class="carousel-item">
-            <img src="assets/img/design.png" alt="design group at table">
-        </div>
+  <!-- Top content 
+<div class="jumbotron text-center">
+  <h1>Memory Memory</h1>
+  <p> Lets test your memory. Flip the cards to reveal a match. A timer will be set to record the time it takes. Good Luck!</p> 
+</div>
+-->
+<!--
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Level 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+-->
 
-    <div id="game">
-    <!-- 16 Game Squares -->
-<div class="game-square">
-  <div>
-    <div></div>
-    <div></div>
-  </div>
-</div>
-<div class="game-square">
-  <div>
-    <div></div>
-    <div></div>
-  </div>
-</div>
-<div class="game-square">
-  <div>
-    <div></div>
-    <div></div>
-  </div>
-</div>
-<div class="game-square">
-  <div>
-    <div></div>
-    <div></div>
-  </div>
-</div>
-<div class="game-square">
-  <div>
-    <div></div>
-    <div></div>
-  </div>
-</div>
-<div class="game-square">
-  <div>
-    <div></div>
-    <div></div>
-  </div>
-</div>
-<div class="game-square">
-  <div>
-    <div></div>
-    <div></div>
-  </div>
-</div>
-<div class="game-square">
-  <div>
-    <div></div>
-    <div></div>
-  </div>
-</div>
-<div class="game-square">
-  <div>
-    <div></div>
-    <div></div>
-  </div>
-</div>
-<div class="game-square">
-  <div>
-    <div></div>
-    <div></div>
-  </div>
-</div>
-<div class="game-square">
-  <div>
-    <div></div>
-    <div></div>
-  </div>
-</div>
-<div class="game-square">
-  <div>
-    <div></div>
-    <div></div>
-  </div>
-</div>
-<div class="game-square">
-  <div>
-    <div></div>
-    <div></div>
-  </div>
-</div>
-<div class="game-square">
-  <div>
-    <div></div>
-    <div></div>
-  </div>
-</div><div class="game-square">
-  <div>
-    <div></div>
-    <div></div>
-  </div>
-</div>
-<div class="game-square">
-  <div>
-    <div></div>
-    <div></div>
-  </div>
-</div>
-  </div>
-</div>
-<!--Time Counter-->
-<div class="row">
-    <h2>Time Counter</h2>
-</div> 
-    <script>
-      // JS link here
-
-    </script>  
+    <section class='memory-game'>
+	<div class='memory-card'>
+		<img class='front-face' src="assets/img/black-dot.png" alt="White Card with Black Dot">
+		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
+	</div>
+	<div class='memory-card'>
+		<img class='front-face' src="assets/img/black-dot.png" alt="White Card with Black Dot">
+		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
+	</div>
+	<div class='memory-card'>
+		<img class='front-face' src="assets/img/aqua-dot.png" alt="White Card with Aqua Dot">
+		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
+	</div>
+	<div class='memory-card'>
+		<img class='front-face' src="assets/img/aqua-dot.png" alt="White Card with Aqua Dot">
+		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
+	</div>
+	<div class='memory-card'>
+		<img class='front-face' src="assets/img/blue-dot.png" alt="White Card with Blue Dot">
+		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
+	</div>
+	<div class='memory-card'>
+		<img class='front-face' src="assets/img/blue-dot.png" alt="White Card with Blue Dot">
+		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
+	</div>
+	<div class='memory-card'>
+		<img class='front-face' src="assets/img/green-dot.png" alt="White Card with Green Dot">
+		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
+	</div>
+	<div class='memory-card'>
+		<img class='front-face' src="assets/img/green-dot.png" alt="White Card with Green Dot">
+		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
+	</div>
+	<div class='memory-card'>
+		<img class='front-face' src="assets/img/orange-dot.png" alt="White Card with Orange Dot">
+		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
+	</div>
+	<div class='memory-card'>
+		<img class='front-face' src="assets/img/orange-dot.png" alt="White Card with Orange Dot">
+		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
+	</div>
+	<div class='memory-card'>
+		<img class='front-face' src="assets/img/pink-dot.png" alt="White Card with Pink Dot">
+		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
+	</div>
+	<div class='memory-card'>
+		<img class='front-face' src="assets/img/pink-dot.png" alt="White Card with Pink Dot">
+		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
+	</div>
+	<div class='memory-card'>
+		<img class='front-face' src="assets/img/purple-dot.png" alt="White Card with Purple Dot">
+		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
+	</div>
+	<div class='memory-card'>
+		<img class='front-face' src="assets/img/purple-dot.png" alt="White Card with Purple Dot">
+		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
+	</div>
+	<div class='memory-card'>
+		<img class='front-face' src="assets/img/red-dot.png" alt="White Card with Red Dot">
+		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
+	</div>
+	<div class='memory-card'>
+		<img class='front-face' src="assets/img/red-dot.png" alt="White Card with Red Dot">
+		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
+    </div>
+</section>
+ 
+<!--
+    <div class="col-sm-4">
+      <h3>Timer</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+ -->
+ <script src="various-scripts.js"></script>
 </body>
 </html>
