@@ -1,21 +1,56 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@500&display=swap');
+/* reset applied */
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
+/* reset */
 body {
   height: 100vh;
-  display: flex;
-  background: content-box radial-gradient(black, skyblue);
+  display: block;
+  background: black;
 }
 
+.display{
+    color: white;
+}
+/* Container needed to position the button. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 50%;
+}
+
+/* Make the image responsive */
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the button and place it at the lower end of the container/image */
+.container .btn {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+/* Style the hover over button */
+.container .btn:hover {
+  background-color: hotpink;
+}
+
+/* Style the hover over button */
 .memory-game {
-  width: 640px;
-  height: 640px;
+  width: 500px;
+  height: 500px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -56,20 +91,20 @@ body {
 .front-face {
   transform: rotateY(180deg);
 }
-
-
-/*
-// Extra small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }*/
+#scoreboard {
+    position: relative;
+    width: 100%;
+    border: crimson 2px;
+    background-color: cornflowerblue;
+    color: black;
+}
+/* Style the footer */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  color: black;
+  text-align: center;
+}
