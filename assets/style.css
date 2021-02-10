@@ -98,7 +98,7 @@ body::after {
   padding: 20px;
   position: absolute;
   border-radius: 5px;
-  background: #1C7CCC;
+  background: cornflowerblue;
   backface-visibility: hidden;
 }
 
@@ -108,10 +108,9 @@ body::after {
 #scoreboard {
     position: relative;
     width: 100%;
-    border: crimson 5px;
+    padding: 5px;
     background-color: cornflowerblue;
-    color: black;\
-
+    color: black;
 }
 
 /* Style the footer */
