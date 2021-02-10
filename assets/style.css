@@ -1,5 +1,6 @@
-/* reset applied */
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
+/* reset applied */
 * {
   padding: 0;
   margin: 0;
@@ -10,10 +11,12 @@ body {
   height: 100vh;
   display: block;
   background: black;
+  font-family: 'Rock Salt', cursive;
 }
 
-.display{
+.display-2 {
     color: white;
+    text-align: center;
 }
 /* Container needed to position the button. Adjust the width as needed */
 .container {
@@ -25,6 +28,17 @@ body {
 .container img {
   width: 100%;
   height: auto;
+}
+body::after {
+  content: '';
+  background: url('img/design.png');
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 /* Style the button and place it at the lower end of the container/image */
@@ -94,9 +108,10 @@ body {
 #scoreboard {
     position: relative;
     width: 100%;
-    border: crimson 2px;
+    border: crimson 5px;
     background-color: cornflowerblue;
-    color: black;
+    color: black;\
+
 }
 
 /* Style the footer */
