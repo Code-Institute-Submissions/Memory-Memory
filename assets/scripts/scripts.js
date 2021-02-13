@@ -1,4 +1,14 @@
 
+//Hidden Show Element 
+
+document.getElementById("okButton")
+        .addEventListener("click", function() {
+  document.getElementById("welcome").hidden = true;
+  document.getElementById("game").hidden = false;
+}, false);
+
+
+
 //THE GAME
 // Flips the cards//
 
