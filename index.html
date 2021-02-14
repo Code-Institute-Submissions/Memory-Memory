@@ -19,7 +19,7 @@
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand">
     <img src="assets/img/design.png" width="30" height="30" class="d-inline-block align-top" alt="">
-  <button class="button" id="okButton">Lets Play</button>
+  
   </a>
      <!-- Button trigger modal -->
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
@@ -33,7 +33,7 @@
 <div class="container">
     <h1 class="display-2">Memory Memory</h1>
   <img src="assets/img/design.png" alt="Man with Brain Icon" class="img-fluid rounded mx-auto d-block" alt="Responsive image">
-     <button class="button" id="okButton">Lets Play</button>
+    <button class="button" id="okButton">Lets Play</button>
 </div>
 </div>
 
@@ -126,13 +126,13 @@
     </div>
     </div>
     <!--Score Board-->
-    <div id="scoreboard">
-    <span id="time">0 Seconds</span>
-    <span id="score">0 Score</span>
-    <button type="button" class="restart" onclick="startGame()"><span></span>Lets Play</button>
-  </div>
 </section>
-
+<div id='box'>
+   <div id="countDown">
+       <h3>Seconds left: <span id="time-left">60</span></h3>
+       <button id="start-button">Start</button>
+   </div>
+ </div>
 <!--Footer-->
 <div class="footer">
   <p>S J E &copy; <br> Educational Purposes</p>

@@ -41,17 +41,18 @@ body::after {
   z-index: -1;
 }
 
+
 /* Style the button and place it at the lower end of the container/image */
 .container .button {
   position: absolute;
-  top: 90%;
-  left: 67%;
+  top: 68%;
+  left: 5%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: rgb(238, 10, 10);
+  background-color: rgb(245, 140, 3);
   color: white;
   font-size: 16px;
-  padding: 12px 24px;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -105,12 +106,8 @@ body::after {
 .front-face {
   transform: rotateY(180deg);
 }
-#scoreboard {
-    position: relative;
-    width: 100%;
-    padding: 5px;
-    background-color: cornflowerblue;
-    color: black;
+.countDown {
+    color: yellow;
 }
 
 /* Style the footer */

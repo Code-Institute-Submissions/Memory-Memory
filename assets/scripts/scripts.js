@@ -1,11 +1,30 @@
 
-//Hidden Show Element 
+//Hidden/reveal elements of the DOM when buttong is clicked
 
 document.getElementById("okButton")
         .addEventListener("click", function() {
   document.getElementById("welcome").hidden = true;
   document.getElementById("game").hidden = false;
 }, false);
+
+// Countdown for the game
+document.addEventListener('DOMContentLoaded', () => {
+    const timeLeftDisplay = document.querySelector('#time-left')
+    const startBtn = document.querySelector('#start-button')
+    let timeLeft = 60
+// function loop that does a countdown which stops at 0
+    function countDown() {
+        setInterval(function() {    
+            if(timeLeft <= 0 ){
+                clearInterval(timeLeft = 0)
+            }
+
+            timeLeftDisplay.innerHTML = timeLeft 
+            timeLeft -= 1
+        }, 1000)
+        }
+    startBtn.addEventListener('click', countDown)
+    })
 
 
 
