@@ -72,13 +72,13 @@ function createBoard() {
 		cardElement.setAttribute('src', 'assets/img/back.png');
 		cardElement.setAttribute('data-id', i);
 		cardElement.addEventListener('click', flipCard);
-		document.getElementById('game-board').appendChild(cardElement);
+		document.getElementById('game').appendChild(cardElement);
 	}
 }
 
 function flipCard() {
 	var cardId = this.getAttribute('data-id');
-	cardsInPlay.push(cards[cardId].rank);
+	cardsInPlay.push(cards[cardId].color);
 	this.setAttribute('src', cards[cardId].cardImage);
 	checkForMatch();	
 };
@@ -91,10 +91,11 @@ function checkForMatch() {
 		} else {
 			alert("Sorry, try again.");
 		}
-	};
-};
-createBoard();
+    };
 
+};
+
+    createBoard();
 
 //THE MODAL//
 // Taken from Bootstrap //
@@ -109,3 +110,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 })
 
 $('#myModal').modal('hide')
+
+function newFunction() {
+    createBoard();
+}

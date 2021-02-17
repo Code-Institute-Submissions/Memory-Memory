@@ -63,7 +63,7 @@ body::after {
 }
 
 /* Style the hover over button */
-.memory-game {
+.game-board {
   width: 500px;
   height: 500px;
   margin: auto;
