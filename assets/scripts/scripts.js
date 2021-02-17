@@ -9,8 +9,8 @@ document.getElementById("okButton")
 
 // Countdown for the game
 document.addEventListener('DOMContentLoaded', () => {
-    const timeLeftDisplay = document.querySelector('#time-left')
-    const startBtn = document.querySelector('#start-button')
+    const timeLeftDisplay = document.querySelector('#time-left');
+    const startBtn = document.querySelector('#start-button');
     let timeLeft = 60
 // function loop that does a countdown which stops at 0
     function countDown() {
@@ -34,8 +34,16 @@ document.addEventListener('DOMContentLoaded', () => {
  const cards = [
 {
 	color: 'black',
-	cardImage: 'assets/img/black-dot.png'
+    cardImage: 'assets/img/black-dot.png'
 },
+{
+	color: 'black',
+    cardImage: 'assets/img/black-dot.png'
+},
+{	
+	color: 'aqua',
+	cardImage: 'assets/img/aqua-dot.png'
+}, 
 {	
 	color: 'aqua',
 	cardImage: 'assets/img/aqua-dot.png'
@@ -44,6 +52,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	color: 'blue',
 	cardImage: 'assets/img/blue-dot.png'
 },
+{
+	color: 'blue',
+	cardImage: 'assets/img/blue-dot.png'
+},
+{ 
+	color: 'red',
+	cardImage: 'assets/img/red-dot.png'
+}, 
 { 
 	color: 'red',
 	cardImage: 'assets/img/red-dot.png'
@@ -53,6 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	cardImage: 'assets/img/green-dot.png'
 }, 
 {
+	color: 'green',
+	cardImage: 'assets/img/green-dot.png'
+}, 
+{
+	color: 'orange',
+	cardImage: 'assets/img/orange-dot.png'
+},
+{
 	color: 'orange',
 	cardImage: 'assets/img/orange-dot.png'
 },
@@ -60,6 +84,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	color: 'purple',
 	cardImage: 'assets/img/purple-dot.png'
 },
+{ 
+	color: 'purple',
+	cardImage: 'assets/img/purple-dot.png'
+},
+{ 
+	color: 'pink', 
+	cardImage: 'assets/img/pink-dot.png'
+}, 
 { 
 	color: 'pink', 
 	cardImage: 'assets/img/pink-dot.png'
@@ -72,17 +104,15 @@ function createBoard() {
 		cardElement.setAttribute('src', 'assets/img/back.png');
 		cardElement.setAttribute('data-id', i);
 		cardElement.addEventListener('click', flipCard);
-		document.getElementById('game').appendChild(cardElement);
+		document.getElementById('grid').appendChild(cardElement);
 	}
 }
-
-function flipCard() {
+    function flipCard() {
 	var cardId = this.getAttribute('data-id');
 	cardsInPlay.push(cards[cardId].color);
 	this.setAttribute('src', cards[cardId].cardImage);
 	checkForMatch();	
 };
-
 
 function checkForMatch() {
 	if (cardsInPlay.length === 2) {
@@ -91,12 +121,10 @@ function checkForMatch() {
 		} else {
 			alert("Sorry, try again.");
 		}
-    };
-
+	};
 };
 
-    createBoard();
-
+createBoard();
 //THE MODAL//
 // Taken from Bootstrap //
 $('#exampleModal').on('show.bs.modal', function (event) {
@@ -114,3 +142,4 @@ $('#myModal').modal('hide')
 function newFunction() {
     createBoard();
 }
+
