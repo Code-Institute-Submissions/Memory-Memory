@@ -1,31 +1,26 @@
+//Music intitaliser 
+var music;
+var musicEnabled = false;
+var bgMusic;
+
+
+
 
 //Hidden/reveal elements of the DOM when buttong is clicked
 
-document.getElementById("okButton")
-        .addEventListener("click", function() {
+  document.getElementById("okButton")
+  document.addEventListener("click", function() {
   document.getElementById("welcome").hidden = true;
   document.getElementById("game").hidden = false;
 }, false);
 
-// Countdown for the game
-document.addEventListener('DOMContentLoaded', () => {
-    const timeLeftDisplay = document.querySelector('#time-left');
-    const startBtn = document.querySelector('#start-button');
-    let timeLeft = 60
-// function loop that does a countdown which stops at 0
-    function countDown() {
-        setInterval(function() {    
-            if(timeLeft <= 0 ){
-                clearInterval(timeLeft = 0)
-            }
+window.addEventListener('load', init);
 
-            timeLeftDisplay.innerHTML = timeLeft 
-            timeLeft -= 1
-        }, 1000)
-        }
-    startBtn.addEventListener('click', countDown)
-    })
+function init() {
+    music = getElementById('music');
+}
 
+music.addEventListener('click', toggleMusic, false);
 
 
 //THE GAME
@@ -143,3 +138,49 @@ function newFunction() {
     createBoard();
 }
 
+// Countdown for the game
+document.addEventListener('DOMContentLoaded', () => {
+    const timeLeftDisplay = document.querySelector('#time-left');
+    const startBtn = document.querySelector('#start-button');
+    let timeLeft = 60
+// function loop that does a countdown which stops at 0
+    function countDown() {
+        setInterval(function() {    
+            if(timeLeft <= 0 ){
+                clearInterval(timeLeft = 0)
+            }
+
+            timeLeftDisplay.innerHTML = timeLeft 
+            timeLeft -= 1
+        }, 1000)
+        }
+    startBtn.addEventListener('click', countDown)
+    })
+
+
+    function toggleMusic(){
+        if(bgMusic == null){
+            initAudio();
+        }
+        else{
+            bgMusic.loop = true;
+            bgMusic.play();
+        }
+        musicEnabled = !musicEnabled; 
+    }
+
+
+function initAudio(){
+    //load audio files
+    bgMusic = new Audio('assets/sounds/song.mp3');
+    //turn off volume
+    bgMusic.volume = 0;
+    //play each file
+    //this grants permission
+    bgMusic.play();
+    //pause each file
+    //this stores them in memory for later
+    bgMusic.pause();
+    //set the volume back for next time
+    bgMusic.volume = 1;
+}

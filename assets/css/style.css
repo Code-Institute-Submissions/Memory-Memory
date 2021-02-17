@@ -18,6 +18,21 @@ body {
     color: white;
     text-align: center;
 }
+
+fieldset {
+    text-align: left;
+    width: 70%;
+    margin: 10px auto;
+    color: blueviolet;
+    font-size: 2em;
+}
+
+#instructions {
+    background-color: yellowgreen;
+    padding: 0 20px;
+    margin: 10px auto;
+    
+}
 /* Container needed to position the button. Adjust the width as needed */
 .container {
   position: relative;
@@ -45,8 +60,8 @@ body::after {
 /* Style the button and place it at the lower end of the container/image */
 .container .button {
   position: absolute;
-  top: 68%;
-  left: 5%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   background-color: rgb(245, 140, 3);

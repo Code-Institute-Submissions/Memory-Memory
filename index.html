@@ -19,24 +19,28 @@
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand">
     <img src="assets/img/design.png" width="30" height="30" class="d-inline-block align-top" alt="">
-  
   </a>
      <!-- Button trigger modal -->
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
   Instructions
 </button>
 </nav>
-    
 </header>
+<!--Music Option-->
+<fieldset>
+      <legend>Sounds</legend>
+        <input type="checkbox" id="music"/>
+        <label for="music">Music</label><br>
+</fieldset>
   <!-- Maing Image and Lets Play Button -->
   <div id="welcome" class="panel">
 <div class="container">
     <h1 class="display-2">Memory Memory</h1>
   <img src="assets/img/design.png" alt="Man with Brain Icon" class="img-fluid rounded mx-auto d-block" alt="Responsive image">
+  <p id="instructions">This is a simple memory game, you need to match the cards by flipping them over and revealing the same colour dots. Seems simple, the only thing holding you back is you and time. Time is precious. To move forward, beat the clock. Good Luck Playa!</p> 
     <button class="button" id="okButton">Lets Play</button>
 </div>
 </div>
-
 <!-- Modal Game Instructions Code from Bootstrap-->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
