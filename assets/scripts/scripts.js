@@ -15,7 +15,7 @@ let play = function(){document.getElementById("audio").play()}
 
 //THE GAME
 // Flips the cards//
-
+document.addEventListener('DOMContentLoaded', () => {
  const cardArray= [
 {
 	name: 'black',
@@ -82,7 +82,7 @@ let play = function(){document.getElementById("audio").play()}
 	img: 'assets/img/pink-dot.png'
 }, 
 ]; 
-document.addEventListener('DOMContentLoaded', () => {
+
 
   cardArray.sort(() => 0.5 - Math.random())
 
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     else if (cardsChosen[0] === cardsChosen[1]) {
       alert('You found a match')
-       cards[optionOneId].setAttribute('src', 'assets/img/white.png')
+      cards[optionOneId].setAttribute('src', 'assets/img/white.png')
       cards[optionTwoId].setAttribute('src', 'assets/img/white.png')
       cards[optionOneId].removeEventListener('click', flipCard)
       cards[optionTwoId].removeEventListener('click', flipCard)
@@ -145,5 +145,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-   createBoard()
+  createBoard()
 })
