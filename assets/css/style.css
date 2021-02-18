@@ -19,12 +19,9 @@ body {
     text-align: center;
 }
 
-fieldset {
-    text-align: left;
-    width: 70%;
-    margin: 10px auto;
+.music {
+
     color: blueviolet;
-    font-size: 2em;
 }
 
 #instructions {
@@ -60,7 +57,7 @@ body::after {
 /* Style the button and place it at the lower end of the container/image */
 .container .button {
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);

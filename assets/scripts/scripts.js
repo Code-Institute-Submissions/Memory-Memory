@@ -1,138 +1,168 @@
 //Music intitaliser 
-var music;
-var musicEnabled = false;
-var bgMusic;
 
 
-
+//styling the h1
 
 //Hidden/reveal elements of the DOM when buttong is clicked
 
-  document.getElementById("okButton")
+  document.getElementById("okButton");
   document.addEventListener("click", function() {
   document.getElementById("welcome").hidden = true;
-  document.getElementById("game").hidden = false;
+  document.getElementById("grid").hidden = false;
 }, false);
 
-window.addEventListener('load', init);
-
-function init() {
-    music = getElementById('music');
-}
-
-music.addEventListener('click', toggleMusic, false);
-
+let play = function(){document.getElementById("audio").play()}
 
 //THE GAME
 // Flips the cards//
 
- const cards = [
+ const cardArray= [
 {
-	color: 'black',
-    cardImage: 'assets/img/black-dot.png'
+	name: 'black',
+    img: 'img/black-dot.png'
 },
 {
-	color: 'black',
-    cardImage: 'assets/img/black-dot.png'
+	name: 'black',
+    img: 'img/black-dot.png'
 },
 {	
-	color: 'aqua',
-	cardImage: 'assets/img/aqua-dot.png'
+	name: 'aqua',
+	img: 'img/aqua-dot.png'
 }, 
 {	
-	color: 'aqua',
-	cardImage: 'assets/img/aqua-dot.png'
+	name: 'aqua',
+	img: 'img/aqua-dot.png'
 }, 
 {
-	color: 'blue',
-	cardImage: 'assets/img/blue-dot.png'
+	name: 'blue',
+	img: 'img/blue-dot.png'
 },
 {
-	color: 'blue',
-	cardImage: 'assets/img/blue-dot.png'
+	name: 'blue',
+	img: 'img/blue-dot.png'
 },
 { 
-	color: 'red',
-	cardImage: 'assets/img/red-dot.png'
+	name: 'red',
+	img: 'img/red-dot.png'
 }, 
 { 
-	color: 'red',
-	cardImage: 'assets/img/red-dot.png'
-}, 
-{
-	color: 'green',
-	cardImage: 'assets/img/green-dot.png'
+	name: 'red',
+	img: 'img/red-dot.png'
 }, 
 {
-	color: 'green',
-	cardImage: 'assets/img/green-dot.png'
+	name: 'green',
+	img: 'img/green-dot.png'
 }, 
 {
-	color: 'orange',
-	cardImage: 'assets/img/orange-dot.png'
+	name: 'green',
+	img: 'img/green-dot.png'
+}, 
+{
+	name: 'orange',
+	img: 'img/orange-dot.png'
 },
 {
-	color: 'orange',
-	cardImage: 'assets/img/orange-dot.png'
+	name: 'orange',
+	img: 'img/orange-dot.png'
 },
 { 
-	color: 'purple',
-	cardImage: 'assets/img/purple-dot.png'
+	name: 'purple',
+	img: 'img/purple-dot.png'
 },
 { 
-	color: 'purple',
-	cardImage: 'assets/img/purple-dot.png'
+	name: 'purple',
+	img: 'img/purple-dot.png'
 },
 { 
-	color: 'pink', 
-	cardImage: 'assets/img/pink-dot.png'
+	name: 'pink', 
+	img: 'img/pink-dot.png'
 }, 
 { 
-	color: 'pink', 
-	cardImage: 'assets/img/pink-dot.png'
+	name: 'pink', 
+	img: 'img/pink-dot.png'
 }, 
 ]; 
 
-function createBoard() {
-	for (let i = 0; i < cards.length; i++){
-		let cardElement = document.createElement('img');
-		cardElement.setAttribute('src', 'assets/img/back.png');
-		cardElement.setAttribute('data-id', i);
-		cardElement.addEventListener('click', flipCard);
-		document.getElementById('grid').appendChild(cardElement);
-	}
-}
-    function flipCard() {
-	var cardId = this.getAttribute('data-id');
-	cardsInPlay.push(cards[cardId].color);
-	this.setAttribute('src', cards[cardId].cardImage);
-	checkForMatch();	
-};
 
-function checkForMatch() {
-	if (cardsInPlay.length === 2) {
-		if (cardsInPlay[0] === cardsInPlay[1]) {
-			alert("You found a match!");
-		} else {
-			alert("Sorry, try again.");
-		}
-	};
-};
+  cardArray.sort(() => 0.5 - Math.random())
+
+  const grid = document.querySelector('.grid')
+  const resultDisplay = document.querySelector('#result')
+  let cardsChosen = []
+  let cardsChosenId = []
+  let cardsWon = []
+
+  //create your board
+  function createBoard() {
+    for (let i = 0; i < cardArray.length; i++) {
+      const card = document.createElement('img')
+      card.setAttribute('src', 'img/back.png')
+      card.setAttribute('data-id', i)
+      card.addEventListener('click', flipCard)
+      grid.appendChild(card)
+    }
+  }
+
+  //check for matches
+  function checkForMatch() {
+    const cards = document.querySelectorAll('img')
+    const optionOneId = cardsChosenId[0]
+    const optionTwoId = cardsChosenId[1]
+    
+    if(optionOneId == optionTwoId) {
+      cards[optionOneId].setAttribute('src', 'img/back.png')
+      cards[optionTwoId].setAttribute('src', 'img/back.png')
+      alert('You have clicked the same image!')
+    }
+    else if (cardsChosen[0] === cardsChosen[1]) {
+      alert('You found a match')
+      cards[optionOneId].setAttribute('src', '')
+      cards[optionTwoId].setAttribute('src', 'img/white.png')
+      cards[optionOneId].removeEventListener('click', flipCard)
+      cards[optionTwoId].removeEventListener('click', flipCard)
+      cardsWon.push(cardsChosen)
+    } else {
+      cards[optionOneId].setAttribute('src', 'img/../back.png')
+      cards[optionTwoId].setAttribute('src', 'img/back.png')
+      alert('Sorry, try again')
+    }
+    cardsChosen = []
+    cardsChosenId = []
+    resultDisplay.textContent = cardsWon.length
+    if  (cardsWon.length === cardArray.length/2) {
+      resultDisplay.textContent = 'Congratulations! You found them all!'
+    }
+  }
+
+  //flip your card
+  function flipCard() {
+    let cardId = this.getAttribute('data-id')
+    cardsChosen.push(cardArray[cardId].name)
+    cardsChosenId.push(cardId)
+    this.setAttribute('src', cardArray[cardId].img)
+    if (cardsChosen.length ===2) {
+      setTimeout(checkForMatch, 500)
+    }
+  }
+
+  createBoard();
+
+
 
 createBoard();
 //THE MODAL//
 // Taken from Bootstrap //
 $('#exampleModal').on('show.bs.modal', function (event) {
-  var button = $(event.relatedTarget) // Button that triggered the modal
-  var recipient = button.data('whatever') // Extract info from data-* attributes
+  var button = $(event.relatedTarget); // Button that triggered the modal
+  var recipient = button.data('whatever'); // Extract info from data-* attributes
   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
   // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-  var modal = $(this)
-  modal.find('.modal-title').text('New message to ' + recipient)
-  modal.find('.modal-body input').val(recipient)
-})
+  var modal = $(this);
+  modal.find('.modal-title').text('New message to ' + recipient);
+  modal.find('.modal-body input').val(recipient);
+});
 
-$('#myModal').modal('hide')
+$('#myModal').modal('hide');
 
 function newFunction() {
     createBoard();
@@ -142,45 +172,17 @@ function newFunction() {
 document.addEventListener('DOMContentLoaded', () => {
     const timeLeftDisplay = document.querySelector('#time-left');
     const startBtn = document.querySelector('#start-button');
-    let timeLeft = 60
+    let timeLeft = 60;
 // function loop that does a countdown which stops at 0
     function countDown() {
         setInterval(function() {    
             if(timeLeft <= 0 ){
-                clearInterval(timeLeft = 0)
+                clearInterval(timeLeft = 0);
             }
 
             timeLeftDisplay.innerHTML = timeLeft 
-            timeLeft -= 1
-        }, 1000)
+            timeLeft -= 1;
+        }, 1000);
         }
-    startBtn.addEventListener('click', countDown)
-    })
-
-
-    function toggleMusic(){
-        if(bgMusic == null){
-            initAudio();
-        }
-        else{
-            bgMusic.loop = true;
-            bgMusic.play();
-        }
-        musicEnabled = !musicEnabled; 
-    }
-
-
-function initAudio(){
-    //load audio files
-    bgMusic = new Audio('assets/sounds/song.mp3');
-    //turn off volume
-    bgMusic.volume = 0;
-    //play each file
-    //this grants permission
-    bgMusic.play();
-    //pause each file
-    //this stores them in memory for later
-    bgMusic.pause();
-    //set the volume back for next time
-    bgMusic.volume = 1;
-}
+    startBtn.addEventListener('click', countDown);
+    });

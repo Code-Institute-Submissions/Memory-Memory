@@ -20,24 +20,21 @@
   <a class="navbar-brand">
     <img src="assets/img/design.png" width="30" height="30" class="d-inline-block align-top" alt="">
   </a>
+  <spann><!--Music Option-->
+<button onclick="play()" class='music'>Play Music</button>
+<audio id="audio" src="assets/sounds/song.mp3"></audio></spann>
      <!-- Button trigger modal -->
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
   Instructions
 </button>
 </nav>
 </header>
-<!--Music Option-->
-<fieldset>
-      <legend>Sounds</legend>
-        <input type="checkbox" id="music"/>
-        <label for="music">Music</label><br>
-</fieldset>
-  <!-- Maing Image and Lets Play Button -->
-  <div id="welcome" class="panel">
+
+<!-- Maing Image and Lets Play Button -->
+<div id="welcome" class="panel">
 <div class="container">
     <h1 class="display-2">Memory Memory</h1>
   <img src="assets/img/design.png" alt="Man with Brain Icon" class="img-fluid rounded mx-auto d-block" alt="Responsive image">
-  <p id="instructions">This is a simple memory game, you need to match the cards by flipping them over and revealing the same colour dots. Seems simple, the only thing holding you back is you and time. Time is precious. To move forward, beat the clock. Good Luck Playa!</p> 
     <button class="button" id="okButton">Lets Play</button>
 </div>
 </div>
@@ -52,7 +49,7 @@
         </button>
       </div>
       <div class="modal-body">
-      Its a very simple game! <br>  Match the cards and beat the clock! 
+      This is a simple memory game, you need to match the cards by flipping them over and revealing the same colour dots. Seems simple, the only thing holding you back is you and time. Time is precious. To move forward, beat the clock. Good Luck Playa!
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -61,9 +58,9 @@
   </div>
 </div>
 
-<!--Memory Game Board Cards-->
+<!--Memory Game Board Cards
 <div id="game" class="panel" hidden>
-<div id='game-board'>
+<div id='game-board' class='grid'>
 	<div class='memory-card' data-id='black'>
 		<img class='front-face' src="assets/img/black-dot.png" alt="White Card with Black Dot">
 		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
@@ -129,8 +126,13 @@
 		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
     </div>
     </div>
-    <!--Score Board-->
+    Score Board-->
 </div>
+
+<h3>Score:<span id="result"></span></h3>
+
+  <div class="grid">
+  </div>
 <div id='box'>
    <div id="countDown">
        <h3>Seconds left: <span id="time-left">60</span></h3>
