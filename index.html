@@ -16,28 +16,16 @@
  <body>
     <!--Header and Navigation--> 
 <header>
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand">
-    <img src="assets/img/design.png" width="30" height="30" class="d-inline-block align-top" alt="">
-  </a>
+<h1 id="title">Memory Memory</h1>
   <span><!--Music Option-->
-<button onclick="play()" class='music'>Play Music</button>
+<button onclick="play()" id='button'>Play Music</button>
 <audio id="audio" src="assets/sounds/song.mp3"></audio></span>
      <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  <button type="button" id='button' data-toggle="modal" data-target="#exampleModalCenter">
   Instructions
 </button>
 </nav>
 </header>
-
-<!-- Maing Image and Lets Play Button -->
-<div id="welcome" class="panel">
-<div class="container">
-    <h1 class="display-2">Memory Memory</h1>
-  <img src="assets/img/design.png" alt="Man with Brain Icon" class="img-fluid rounded mx-auto d-block" alt="Responsive image">
-    <button class="button" id="okButton">Lets Play</button>
-</div>
-</div>
 <!-- Modal Game Instructions Code from Bootstrap-->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -57,6 +45,7 @@
     </div>
   </div>
 </div>
+
 
 <!--Memory Game Board Cards
 <div id="game" class="panel" hidden>
@@ -128,17 +117,16 @@
     </div>
     Score Board-->
 </div>
-
+<!--This is the game score board-->
+<section class="score">
+            <p><button class="restart" id='button' onclick=startGame()>Restart </button></p>
+            <p><span class="moves">Moves: </span> 0 <br>  Time: <span class="timer">0 </span></p> 
+<!--Shows Game Score-->  
 <h3>Score:<span id="result"></span></h3>
-
+<!--This is where the game will populate-->
   <div class="grid">
   </div>
-<div id='box'>
-   <div id="countDown">
-       <h3>Seconds left: <span id="time-left">60</span></h3>
-       <button id="start-button">Start</button>
-   </div>
- </div>
+ </section>
 <!--Footer-->
 <div class="footer">
   <p>S J E &copy; <br> Educational Purposes</p>

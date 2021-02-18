@@ -1,22 +1,24 @@
 //Music intitaliser 
 
 
-//styling the h1
-
-//Hidden/reveal elements of the DOM when buttong is clicked
-
-  document.getElementById("okButton");
-  document.addEventListener("click", function() {
-  document.getElementById("welcome").hidden = true;
-  document.getElementById("grid").hidden = false;
-}, false);
-
+//Moves counter intalised 
+let moves = 0;
+let counter = document.querySelector('.moves');
 let play = function(){document.getElementById("audio").play()}
 
+
+
+//Hidden/reveal elements of the DOM when buttong is clicked
+// document.getElementById("okButton");
+ // document.addEventListener("click", function() {
+ // document.getElementById("welcome").hidden = true;
+ // document.getElementById("grid").hidden = false;
+//}, false);
+
 //THE GAME
-// Flips the cards//
-document.addEventListener('DOMContentLoaded', () => {
- const cardArray= [
+
+//Array of Cards 
+    const cardArray= [
 {
 	name: 'black',
     img: 'assets/img/black-dot.png'
@@ -35,11 +37,11 @@ document.addEventListener('DOMContentLoaded', () => {
 }, 
 {
 	name: 'blue',
-	img: 'assets/img/aqua-dot.png'
+	img: 'assets/img/blue-dot.png'
 },
 {
 	name: 'blue',
-	img: 'assets/img/aqua-dot.png'
+	img: 'assets/img/blue-dot.png'
 },
 { 
 	name: 'red',
@@ -88,42 +90,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const grid = document.querySelector('.grid')
   const resultDisplay = document.querySelector('#result')
-  let cardsChosen = []
-  let cardsChosenId = []
-  let cardsWon = []
+  var cardsChosen = []
+  var cardsChosenId = []
+  var cardsWon = []
+  
+   
+
 
   //create your board
   function createBoard() {
+    //create
     for (let i = 0; i < cardArray.length; i++) {
       const card = document.createElement('img')
+      //creates card by linking to the image
       card.setAttribute('src', 'assets/img/back.png')
+        //gives the card a data-id - goes loops through the cards
       card.setAttribute('data-id', i)
+      card.setAttribute('name', cardArray[i].name)
+      //Listens for the card to be click and then flips
       card.addEventListener('click', flipCard)
+      //images elements with different id's will be loaded to the grid using the appendchild
       grid.appendChild(card)
     }
   }
 
   //check for matches
   function checkForMatch() {
-    const cards = document.querySelectorAll('img')
-    const optionOneId = cardsChosenId[0]
-    const optionTwoId = cardsChosenId[1]
+    var cards = document.querySelectorAll('img')
     
-    if(optionOneId == optionTwoId) {
-      cards[optionOneId].setAttribute('src', 'assets/img/back.png')
-      cards[optionTwoId].setAttribute('src', 'assets/img/back.png')
+    if(cardsChosenId[0] == cardsChosenId[1]) {
+      cards[cardsChosenId[0]].setAttribute('src', 'assets/img/back.png')
+      cards[cardsChosenId[1]].setAttribute('src', 'assets/img/back.png')
       alert('You have clicked the same image!')
     }
     else if (cardsChosen[0] === cardsChosen[1]) {
       alert('You found a match')
-      cards[optionOneId].setAttribute('src', 'assets/img/white.png')
-      cards[optionTwoId].setAttribute('src', 'assets/img/white.png')
-      cards[optionOneId].removeEventListener('click', flipCard)
-      cards[optionTwoId].removeEventListener('click', flipCard)
+      cards[cardsChosenId[0]].setAttribute('src', 'assets/img/white.png')
+      cards[cardsChosenId[1]].setAttribute('src', 'assets/img/white.png')
+      cards[cardsChosenId[0]].removeEventListener('click', flipCard)
+      cards[cardsChosenId[1]].removeEventListener('click', flipCard)
       cardsWon.push(cardsChosen)
     } else {
-      cards[optionOneId].setAttribute('src', 'assets/img/back.png')
-      cards[optionTwoId].setAttribute('src', 'assets/img/back.png')
+      cards[cardsChosenId[0]].setAttribute('src', 'assets/img/back.png')
+      cards[cardsChosenId[1]].setAttribute('src', 'assets/img/back.png')
       alert('Sorry, try again')
     }
     cardsChosen = []
@@ -134,16 +143,41 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  //flip your card
-  function flipCard() {
+  //flip your card              
+  function flipCard() {          
     let cardId = this.getAttribute('data-id')
-    cardsChosen.push(cardArray[cardId].name)
+    let cardName = cardArray[cardId].name
+    console.log(cardId)
+    console.log(cardName)
+    cardsChosen.push(cardName)
+    console.log(cardsChosen)
     cardsChosenId.push(cardId)
+    console.log(cardsChosenId)
     this.setAttribute('src', cardArray[cardId].img)
-    if (cardsChosen.length ===2) {
-      setTimeout(checkForMatch, 500)
+    if (cardsChosen.length === 2) {
+        setTimeout(checkForMatch, 500)
     }
   }
 
   createBoard()
-})
+
+// counts moves
+function moveCounter(){
+    moves++;
+    counter.innerHTML = moves;
+    if(moves == 1){
+        second = 0;
+        startTimer();
+    }
+}
+
+// timer
+var second = 0;
+var timer = document.querySelector(".timer");
+var interval;
+function startTimer(){
+    interval = setInterval(function(){
+        timer.innerHTML = second+" secs";
+        second++;
+    },1000);
+}

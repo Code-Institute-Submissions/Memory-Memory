@@ -14,33 +14,23 @@ body {
   font-family: 'Rock Salt', cursive;
 }
 
-.display-2 {
-    color: white;
+
+#button{
+    padding: .5em;
+    background-color: blueviolet;
+    font-size: large;
+}
+ /*Style the hover over button */
+#button:hover {
+  background-color: hotpink;
+}
+
+.score {
     text-align: center;
+    color: rgb(255, 255, 255);
+    margin: 10px 0;
 }
 
-.music {
-
-    color: blueviolet;
-}
-
-#instructions {
-    background-color: yellowgreen;
-    padding: 0 20px;
-    margin: 10px auto;
-    
-}
-/* Container needed to position the button. Adjust the width as needed */
-.container {
-  position: relative;
-  width: 50%;
-}
-
-/* Make the image responsive */
-.container img {
-  width: 100%;
-  height: auto;
-}
 body::after {
   content: '';
   background: url('/assets/img/design.png');
@@ -79,10 +69,10 @@ body::after {
   flex-wrap: wrap;
   width: 400px;
   height: 400px;
-    max-width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 0.3em;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.3em;
 }
 
 /*
@@ -135,3 +125,31 @@ body::after {
   color: black;
   text-align: center;
 }
+
+
+@media (max-width: 575.98px) {
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  height: 200px;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.3em;
+}
+
+}
+/*
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { ... }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { ... }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { ... }
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width
+*/
