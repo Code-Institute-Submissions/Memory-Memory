@@ -80,6 +80,7 @@ body::after {
   margin-left: auto;
   margin-right: auto;
   border-radius: 0.3em;
+  transform: perspective(1000%);
 }
 
 /* Style the footer */
@@ -98,13 +99,13 @@ body::after {
 
 
 
-#button{
+.buttons{
     padding: .2em;
     background-color: blueviolet;
     font-size: small;
 }
  /*Style the hover over button */
-#button:hover {
+.buttons:hover {
   background-color: hotpink;
 }
 

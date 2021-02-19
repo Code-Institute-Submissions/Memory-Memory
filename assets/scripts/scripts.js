@@ -6,10 +6,32 @@
 
 //Music intitaliser 
 //Moves counter intalised 
+var restartButton;
 let moves = 0;
 let counter = document.querySelector('.moves');
 let play = function(){document.getElementById("audio").play()}
 
+
+restartButton = document.getElementById("restartButton");
+restartButton.addEventListener("click", gameRestart)
+
+function gameRestart() {
+    createBoard;
+    countdown;
+    console.log(gameRestart)
+}
+
+// Countdown timer
+
+var seconds = 60, $seconds = document.querySelector('#countdown');
+(function countdown() {
+  $seconds.textContent = seconds + ' second' + (seconds ==  1 ?  '' :  's')
+   if(seconds --> 0) setTimeout(countdown, 1000) 
+   if (seconds === 0) {
+       alert('sorry, out of time');
+       clearInterval(seconds);
+   }
+})();
 
 
 //THE GAME
@@ -83,8 +105,7 @@ let play = function(){document.getElementById("audio").play()}
 ]; 
 
 
-  cardArray.sort(() => 0.5 - Math.random())
-
+  cardArray.sort(() => 0.5 - Math.random()) 
   const grid = document.querySelector('.grid')
   const resultDisplay = document.querySelector('#result')
   var cardsChosen = []
@@ -156,25 +177,4 @@ let play = function(){document.getElementById("audio").play()}
     }
   }
 
-  createBoard()
-
-// counts moves
-function moveCounter(){
-    moves++;
-    counter.innerHTML = moves;
-    if(moves == 1){
-        second = 0;
-        startTimer();
-    }
-}
-
-// timer
-var second = 0;
-var timer = document.querySelector(".timer");
-var interval;
-function startTimer(){
-    interval = setInterval(function(){
-        timer.innerHTML = second+" secs";
-        second++;
-    },1000);
-}
+  createBoard();

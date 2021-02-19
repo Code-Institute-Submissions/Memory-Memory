@@ -18,10 +18,10 @@
 <header>
 <h1 id="title">Memory Memory</h1>
   <span><!--Music Option-->
-<button onclick="play()" id='button'>Play Music</button>
+<button onclick="play()" id='button' class='buttons'>Play Music</button>
 <audio id="audio" src="assets/sounds/song.mp3"></audio></span>
      <!-- Button trigger modal -->
-  <button type="button" id='button' data-toggle="modal" data-target="#exampleModalCenter">
+  <button type="button" id='button' class='buttons' data-toggle="modal" data-target="#exampleModalCenter">
   Instructions
 </button>
 </nav>
@@ -46,81 +46,10 @@
   </div>
 </div>
 
-
-<!--Memory Game Board Cards
-<div id="game" class="panel" hidden>
-<div id='game-board' class='grid'>
-	<div class='memory-card' data-id='black'>
-		<img class='front-face' src="assets/img/black-dot.png" alt="White Card with Black Dot">
-		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
-	</div>
-	<div class='memory-card' data-id='black'>
-		<img class='front-face' src="assets/img/black-dot.png" alt="White Card with Black Dot">
-		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
-	</div>
-	<div class='memory-card' data-framework='aqua'>
-		<img class='front-face' src="assets/img/aqua-dot.png" alt="White Card with Aqua Dot">
-		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
-	</div>
-	<div class='memory-card' data-id='aqua'>
-		<img class='front-face' src="assets/img/aqua-dot.png" alt="White Card with Aqua Dot">
-		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
-	</div>
-	<div class='memory-card' data-id='blue'>
-		<img class='front-face' src="assets/img/blue-dot.png" alt="White Card with Blue Dot">
-		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
-	</div>
-	<div class='memory-card' data-id='blue'>
-		<img class='front-face' src="assets/img/blue-dot.png" alt="White Card with Blue Dot">
-		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
-	</div>
-	<div class='memory-card' data-id='green'>
-		<img class='front-face' src="assets/img/green-dot.png" alt="White Card with Green Dot">
-		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
-	</div>
-	<div class='memory-card' data-id='green'>
-		<img class='front-face' src="assets/img/green-dot.png" alt="White Card with Green Dot">
-		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
-	</div>
-    <div class='memory-card' data-id='orange'>
-		<img class='front-face' src="assets/img/orange-dot.png" alt="White Card with Orange Dot">
-		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
-	</div>
-	<div class='memory-card' data-id='orange'>
-		<img class='front-face' src="assets/img/orange-dot.png" alt="White Card with Orange Dot">
-		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
-	</div>
-	<div class='memory-card' data-id='pink'>
-		<img class='front-face' src="assets/img/pink-dot.png" alt="White Card with Pink Dot">
-		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
-	</div>
-	<div class='memory-card' data-id='pink'>
-		<img class='front-face' src="assets/img/pink-dot.png" alt="White Card with Pink Dot">
-		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
-	</div>
-	<div class='memory-card' data-id='purple'>
-		<img class='front-face' src="assets/img/purple-dot.png" alt="White Card with Purple Dot">
-		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
-	</div>
-	<div class='memory-card' data-id='purple'>
-		<img class='front-face' src="assets/img/purple-dot.png" alt="White Card with Purple Dot">
-		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
-	</div>
-	<div class='memory-card' data-id='red'>
-		<img class='front-face' src="assets/img/red-dot.png" alt="White Card with Red Dot">
-		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
-	</div>
-	<div class='memory-card' data-id='red'>
-		<img class='front-face' src="assets/img/red-dot.png" alt="White Card with Red Dot">
-		<img class='back-face'  src="assets/img/back.png" alt="Blue Card">
-    </div>
-    </div>
-    Score Board-->
-</div>
 <!--This is the game score board-->
 <section class="score">
-            <p><button class="restart" id='button' onclick=startGame()>Restart </button></p>
-            <p><span class="moves">Moves: </span> 0 <br>  Time: <span class="timer">0 </span></p> 
+            <p><button class="buttons"  id='restartButton'>Restart </button></p>
+            <p><span class="moves">Moves: </span> 0 <br>  Time: <span class= "timer" id="countdown">0 </span></p> 
 <!--Shows Game Score-->  
 <h3>Score:<span id="result"></span></h3>
 <!--This is where the game will populate-->
