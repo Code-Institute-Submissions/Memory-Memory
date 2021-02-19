@@ -14,6 +14,12 @@ body {
   font-family: 'Rock Salt', cursive;
 }
 
+#title {
+    text-align: center;
+    color: azure;
+    size: 1em;
+    transition: 5s;
+}
 
 #button{
     padding: .5em;
@@ -29,6 +35,7 @@ body {
     text-align: center;
     color: rgb(255, 255, 255);
     margin: 10px 0;
+    padding:1.5em;
 }
 
 body::after {
@@ -75,46 +82,6 @@ body::after {
   border-radius: 0.3em;
 }
 
-/*
-
-.memory-card {
-  width: calc(25% - 10px);
-  height: calc(33.333% - 10px);
-  margin: 5px;
-  position: relative;
-  transform: scale(1);
-  transform-style: preserve-3d;
-  transition: transform .5s;
-  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
-}
-
-.memory-card:active {
-  transform: scale(0.97);
-  transition: transform .2s;
-}
-
-.memory-card.flip {
-  transform: rotateY(180deg);
-}
-
-.front-face,
-.back-face {
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  position: absolute;
-  border-radius: 5px;
-  background: cornflowerblue;
-  backface-visibility: hidden;
-}
-
-.front-face {
-  transform: rotateY(180deg);
-}
-.countDown {
-    color: yellow;
-}
-*/
 /* Style the footer */
 .footer {
   position: fixed;
@@ -128,17 +95,24 @@ body::after {
 
 
 @media (max-width: 575.98px) {
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  width: 200px;
-  height: 200px;
-  max-width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 0.3em;
+
+
+
+#button{
+    padding: .2em;
+    background-color: blueviolet;
+    font-size: small;
+}
+ /*Style the hover over button */
+#button:hover {
+  background-color: hotpink;
 }
 
+.score {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin: 10px 0;
+}
 }
 /*
 // Small devices (landscape phones, less than 768px)

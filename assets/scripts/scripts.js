@@ -1,19 +1,16 @@
+//const a variable with value that cannot be changed 
+//let  a variable with value that can be changed
+//var a variable with value that can be changed - global scope
+
+
+
 //Music intitaliser 
-
-
 //Moves counter intalised 
 let moves = 0;
 let counter = document.querySelector('.moves');
 let play = function(){document.getElementById("audio").play()}
 
 
-
-//Hidden/reveal elements of the DOM when buttong is clicked
-// document.getElementById("okButton");
- // document.addEventListener("click", function() {
- // document.getElementById("welcome").hidden = true;
- // document.getElementById("grid").hidden = false;
-//}, false);
 
 //THE GAME
 
@@ -61,11 +58,11 @@ let play = function(){document.getElementById("audio").play()}
 }, 
 {
 	name: 'orange',
-	img: 'assets/img/green-dot.png'
+	img: 'assets/img/orange-dot.png'
 },
 {
 	name: 'orange',
-	img: 'assets/img/green-dot.png'
+	img: 'assets/img/orange-dot.png'
 },
 { 
 	name: 'purple',
