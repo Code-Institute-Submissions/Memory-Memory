@@ -18,8 +18,8 @@ body {
     text-align: center;
     color: azure;
     padding: 20px;
-   font-size: 100px;
-    transition: 10s;
+    font-size: 80px;
+    transition: 3s;
 }
 
 .wrapper {
@@ -87,7 +87,7 @@ body::after {
     text-align: center;
     color: azure;
     font-size: 50px;
-    transition: 5s;
+    transition: 1s;
 }
 
 .wrapper {

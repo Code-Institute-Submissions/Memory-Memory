@@ -1,11 +1,6 @@
 //const a variable with value that cannot be changed 
 //let  a variable with value that can be changed
 //var a variable with value that can be changed - global scope
-//Music intitaliser 
-//Moves counter intalised 
-
-let moves = 0;
-let counter = document.querySelector('.moves');
 
 // Music Player
 let play = function(){document.getElementById("audio").play()}
@@ -20,11 +15,11 @@ function reloadThePage(){
 // Countdown timer
 var seconds = 60, $seconds = document.querySelector('#countdown');
 (function countdown() {
-  $seconds.textContent = `${seconds} second${seconds == 0 ? '' : 's'}`
+  $seconds.textContent = `${seconds} second${seconds == 1 ? '' : 's'}`
    if(seconds --> 0) setTimeout(countdown, 1000) 
    if (seconds === 0) {
-       alert('sorry, out of time');
        clearInterval(seconds);
+       alert('OUT OF TIME!');
    }
 })();
 
@@ -99,9 +94,11 @@ var seconds = 60, $seconds = document.querySelector('#countdown');
 }, 
 ]; 
 
-
+// shuffle cards
   cardArray.sort(() => 0.5 - Math.random()) 
+//grid 
   const grid = document.querySelector('.grid')
+//results 
   const resultDisplay = document.querySelector('#result')
   var cardsChosen = []
   var cardsChosenId = []
@@ -130,15 +127,14 @@ var seconds = 60, $seconds = document.querySelector('#countdown');
   //check for matches
   function checkForMatch() {
     var cards = document.querySelectorAll('img')
-    
     if(cardsChosenId[0] == cardsChosenId[1]) {
       cards[cardsChosenId[0]].setAttribute('src', 'assets/img/back.png')
       cards[cardsChosenId[1]].setAttribute('src', 'assets/img/back.png')
-      alert('You have clicked the same image!')
+    
     }
     else if (cardsChosen[0] === cardsChosen[1]) {
-      alert('You found a match')
-      //set the selected cards to white 
+      alert('Go you! Match Found')
+      //set the matched cards to white 
       cards[cardsChosenId[0]].setAttribute('src', 'assets/img/white.png')
       cards[cardsChosenId[1]].setAttribute('src', 'assets/img/white.png')
       cards[cardsChosenId[0]].removeEventListener('click', flipCard)
@@ -147,13 +143,13 @@ var seconds = 60, $seconds = document.querySelector('#countdown');
     } else {
       cards[cardsChosenId[0]].setAttribute('src', 'assets/img/back.png')
       cards[cardsChosenId[1]].setAttribute('src', 'assets/img/back.png')
-      alert('Sorry, try again')
+      alert('No Match, Try Again')
     }
     cardsChosen = []
     cardsChosenId = []
     resultDisplay.textContent = cardsWon.length
     if  (cardsWon.length === cardArray.length/2) {
-      resultDisplay.textContent = 'WELL DONE, You did it!'
+      resultDisplay.textContent = 'WELL DONE, YOU DID IT!'
     }
   }
 
