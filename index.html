@@ -18,13 +18,15 @@
 <header>
 <h1 id="title">Memory Memory</h1>
   <span><!--Music Option-->
-<button onclick="play()" id='button' class='buttons'>Play Music</button>
+<div class="wrapper">
+<button onclick="play()" id="button" class="buttons">Play Music</button>
 <audio id="audio" src="assets/sounds/song.mp3"></audio></span>
      <!-- Button trigger modal -->
   <button type="button" id='button' class='buttons' data-toggle="modal" data-target="#exampleModalCenter">
   Instructions
 </button>
-</nav>
+<button class="buttons" onClick="reloadThePage()">Restart!</button>
+</div>
 </header>
 <!-- Modal Game Instructions Code from Bootstrap-->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -48,8 +50,7 @@
 
 <!--This is the game score board-->
 <section class="score">
-            <p><button class="buttons"  id='restartButton'>Restart </button></p>
-            <p><span class="moves">Moves: </span> 0 <br>  Time: <span class= "timer" id="countdown">0 </span></p> 
+    <p><br>Time: <span class= "timer" id="countdown">0 </span></p> 
 <!--Shows Game Score-->  
 <h3>Score:<span id="result"></span></h3>
 <!--This is where the game will populate-->

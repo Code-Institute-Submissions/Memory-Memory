@@ -1,31 +1,26 @@
 //const a variable with value that cannot be changed 
 //let  a variable with value that can be changed
 //var a variable with value that can be changed - global scope
-
-
-
 //Music intitaliser 
 //Moves counter intalised 
-var restartButton;
+
 let moves = 0;
 let counter = document.querySelector('.moves');
+
+// Music Player
 let play = function(){document.getElementById("audio").play()}
 
 
-restartButton = document.getElementById("restartButton");
-restartButton.addEventListener("click", gameRestart)
-
-function gameRestart() {
-    createBoard;
-    countdown;
-    console.log(gameRestart)
-}
+// refresh the page, start again
+function reloadThePage(){
+    window.location.reload();
+} 
+ 
 
 // Countdown timer
-
 var seconds = 60, $seconds = document.querySelector('#countdown');
 (function countdown() {
-  $seconds.textContent = seconds + ' second' + (seconds ==  1 ?  '' :  's')
+  $seconds.textContent = `${seconds} second${seconds == 0 ? '' : 's'}`
    if(seconds --> 0) setTimeout(countdown, 1000) 
    if (seconds === 0) {
        alert('sorry, out of time');
@@ -143,6 +138,7 @@ var seconds = 60, $seconds = document.querySelector('#countdown');
     }
     else if (cardsChosen[0] === cardsChosen[1]) {
       alert('You found a match')
+      //set the selected cards to white 
       cards[cardsChosenId[0]].setAttribute('src', 'assets/img/white.png')
       cards[cardsChosenId[1]].setAttribute('src', 'assets/img/white.png')
       cards[cardsChosenId[0]].removeEventListener('click', flipCard)
@@ -157,7 +153,7 @@ var seconds = 60, $seconds = document.querySelector('#countdown');
     cardsChosenId = []
     resultDisplay.textContent = cardsWon.length
     if  (cardsWon.length === cardArray.length/2) {
-      resultDisplay.textContent = 'Congratulations! You found them all!'
+      resultDisplay.textContent = 'WELL DONE, You did it!'
     }
   }
 

@@ -17,17 +17,26 @@ body {
 #title {
     text-align: center;
     color: azure;
-    size: 1em;
-    transition: 5s;
+    padding: 20px;
+   font-size: 100px;
+    transition: 10s;
 }
 
-#button{
-    padding: .5em;
-    background-color: blueviolet;
-    font-size: large;
+.wrapper {
+    text-align: center;
+}
+
+.buttons{
+    padding: 10px;
+    align-items: center;
+    position: relative;
+    color: azure;
+    background-color: rgb(67, 214, 37);
+    border: yellowgreen;
+    font-size: x-large;
 }
  /*Style the hover over button */
-#button:hover {
+.buttons:hover {
   background-color: hotpink;
 }
 
@@ -48,27 +57,6 @@ body::after {
   right: 0;
   position: absolute;
   z-index: -1;
-}
-
-
-/* Style the button and place it at the lower end of the container/image */
-.container .button {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: rgb(245, 140, 3);
-  color: white;
-  font-size: 16px;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-/* Style the hover over button */
-.container .button:hover {
-  background-color: hotpink;
 }
 /* Style the gameboard*/ 
 .grid {
@@ -93,15 +81,26 @@ body::after {
   color: black;
   text-align: center;
 }
-
-
 @media (max-width: 575.98px) {
 
+#title {
+    text-align: center;
+    color: azure;
+    font-size: 50px;
+    transition: 5s;
+}
 
+.wrapper {
+    text-align: center;
+}
 
 .buttons{
-    padding: .2em;
-    background-color: blueviolet;
+    size: 10px;
+    align-items: center;
+    position: relative;
+    color: azure;
+    background-color: rgb(67, 214, 37);
+    border: yellowgreen;
     font-size: small;
 }
  /*Style the hover over button */
@@ -112,11 +111,25 @@ body::after {
 .score {
     text-align: center;
     color: rgb(255, 255, 255);
-    margin: 10px 0;
+  
 }
+
+/* Style the gameboard*/ 
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  height: 200px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.1em;
+  transform: perspective(1000%);
 }
+
+
 /*
-// Small devices (landscape phones, less than 768px)
+ Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) { ... }
 
 // Medium devices (tablets, less than 992px)
@@ -128,3 +141,4 @@ body::after {
 // Extra large devices (large desktops)
 // No media query since the extra-large breakpoint has no upper bound on its width
 */
+}
