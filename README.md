@@ -1,81 +1,111 @@
 # Memory-Memory
 
-I decided to develop a simple game application based upon a classic card game called "Concentration". This game includes a set number of cards which includes pairs of cards. The premise of the game is that the user will be presented with all the cards facing downward, and will begin by flipping one card and revealing the identity of this card and then flipping over another card to check if the cards match. If the cards match they remain flipped, if they do not match the cards flip back to the starting poisition and you continue with the game, trying to reveal matches. 
+I decided to develop a simple game application based upon a classic card game called "Concentration". This game includes a set number of cards pairs. The premise of the game is for the user to match all of the pairs of the cards, using their memory - remembering the exact location of a card in order to match it to its pair. 
+
+The game starts, with the user presented with all the cards facing downward, and will begin by flipping one card and revealing the identity of this card and then flipping over another card to check if the cards match. If the cards match they remain flipped, if they do not match the cards flip back to the starting poisition and you continue with the game, trying to reveal matches. 
 
 More information on the original concentration game can be found [Wikipedia](https://en.wikipedia.org/wiki/Concentration_(card_game)) here. 
  
 ## UX
  
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+The premise of this game is simple and I also wanted to ensure that the design of the game matched the games philosophy. I wanted to ensure that the users were never overloaded with too much information or design. I did not want anything to distract from the main objective; to play the game. I decided to place an image and repeat it in the background to add some texture to the overall design. I wanted the game board to stand out so I decided a blue colour for the cards when they were faced down. I wanted to bring some colour into the game, so opted for white cards with colour dots. When the cards were matched they would turn white, providing feedback to the user of their progress. I also provided feedback to the user after each selection. 
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
+### UX - User objectives
+- As a game player I want to be able to play a game with a set number of cards, so that I can test my memory skills.
+- As a user I want to be able to flip reveal the cards to be able to match them 
+- So that the user can improve and test their memory
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+### UX - User Scenario
+
+1. User Lands on Pages
+2. User is presented with 3 options/buttons 
+    - play music
+        - click button; music plays
+    - instructions
+        - click instructions; game instructions shown
+    - restart 
+        - restart; page refreshes and game goes to start position
+3. Time counter 
+4. Grid of cards 
+5. User selects a card - it flips to reveal colour
+6. User selects another card - if the cards match, the cards remain flipped and turn white. If the cards to not match, the cards flip back to starting position and the games resumes. 
+7. Continue with steps 5 and 6 until all cards are matched 
+
+[Memory Memory Game Wireframe](https://github.com/SJE-1/Memory-Memory/blob/0815b2e3e28d8b33e2e65b50f4716ff6fbb8c582/Wireframe/Memory%20Memory%20Game%20Wireframe.pdf)
 
 ## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
- 
-### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
-
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+This game includes the option to play music. 
+The game also includes instructions and a restart button.
+This game includes a shuffle feature 
 
 ### Features Left to Implement
-- Another feature idea
+- Adding different Levels to the game, by giving less time or by adding more cards
+- Multiple Player options
+- Various Card Deck Choices 
+- Various Music Choices
 
 ## Technologies Used
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
-
-- [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
-
+HTML 
+CSS 
+JavaScript - Vanialla 
+Bootstrap 
 
 ## Testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+The website was tested using responsive devices developer tools on google chrome. The website was tested across the following web browsers
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+- Safari
+- Chrome
+- Firefox
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+The website was also tested on an Apple 6 smartphone, MOTO smartphone, Apple MacBook pro, DELL and HP desktop computers. The website behaved as it should through all devices.
 
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
+Below is an example of how the website looks on two different browsers and at two different sizes. The website is performing well across all platforms. The game works better at desktop level and also on the iPad in a horizontal poisition.
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+[Memory Memory Wireframe iPad](https://github.com/SJE-1/Memory-Memory/blob/0815b2e3e28d8b33e2e65b50f4716ff6fbb8c582/Wireframe/Memory%20Memory%20-%20iPad%20Example.png)
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+[Memory Memory Wireframe iPhone5](https://github.com/SJE-1/Memory-Memory/blob/0815b2e3e28d8b33e2e65b50f4716ff6fbb8c582/Wireframe/Memory%20Memory%20Game%20-%20iPhone%205%20.png)
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+
+The developer tools in the Chrome browser were especially useful for identifying any issues with the JavaScript code. I was able to see where I had name some of the png files wrong which was stopping the code matching the corect cards. 
+
+I was able to test the code in the browser by following these steps: 
+
+#### Memory Memory Game:
+    1. Go to the game board
+    2. Press play music - check if the music plays. 
+    3. Press the instructions button - read structions - close instructions
+    4. Press reset to turn off the music and start the clock again
+    5. Select a card, does it reveal a colour? 
+    6. Select another card, do they match? 
+    7. Alert to let the user know if there is a match or not. 
+    8. If the cards match do they stay flipped and turn white 
+    9. If the cards do not match do they return to the starting position and allow the user to select again
+
+#### Code Validation
+The HTML code was validated using the W3C Mark-up Validation Service. 
+The CSS code was validated using Jigsaw CSS Validator.
 
 ## Deployment
+This website is deployed on the GitHub pages. It uses the master branch and it updates each time there is a new push to the repository. 
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+- the site is deployed by entering into the repository where the project is       stored. 
+- Go to settings 
+- Scroll down to GitHub pages 
+- Under Source - Branch - select - Master
+- Save
+- Project will deploy 
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
-
-
-## Credits
-
-### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+## Content
+-	The content for this website is original and created by me.
 
 ### Media
-- The photos used in this site were obtained from ...
+- The music in this website was written and produced by me (SJE). 
+- The Logo was designed using CANVA. 
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
+- I received inspiration for this project from surfing the net and reading articles online
+- I want to thank my Mentor, Ignatius, for his guidance, advice and patience. 

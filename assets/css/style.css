@@ -105,59 +105,7 @@ body::after {
 	color: black;
 	text-align: center;
 }
-
-
 /**** MEDIA QUERIES ****/
-
-
-/* Media Queries restyling elements for smaller devices such as iPad */
-
-@media (min-width: 1024px) and (max-width: 1920px) {
-	#title {
-		text-align: center;
-		color: azure;
-		font-size: 80px;
-		padding-top: 20px;
-		padding-bottom: 50px;
-		transition: 1s;
-	}
-	/*Align buttons center*/
-	.wrapper {
-		text-align: center;
-	}
-	/*Style the buttons*/
-	.buttons {
-		align-items: center;
-		position: relative;
-		color: azure;
-		background-color: rgb(67, 214, 37);
-		border: yellowgreen;
-		font-size: x-large;
-		padding: 10px 10px;
-	}
-	/*Style the hover over button */
-	.buttons:hover {
-		background-color: hotpink;
-	}
-	.score {
-		text-align: center;
-		font-size: 30px;
-		color: rgb(255, 255, 255);
-		padding: 10px;
-	}
-	/* Style the gameboard*/
-	.grid {
-		display: flex;
-		flex-wrap: wrap;
-		width: 400px;
-		height: 400px;
-		max-width: 50%;
-		margin-left: auto;
-		margin-right: auto;
-		border-radius: 0.1em;
-		padding-top: 50px;
-	}
-	/**** MEDIA QUERIES ****/
 	/* Media Queries restyling elements for smaller devices such as mobile */
 	@media (max-width: 575.98px) {
 		#title {
@@ -201,6 +149,5 @@ body::after {
 			margin-left: auto;
 			margin-right: auto;
 			border-radius: 0.1em;
-		}
-	}
+        }
 }
