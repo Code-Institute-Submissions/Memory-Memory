@@ -1,6 +1,6 @@
 # Memory-Memory
 
-I decided to develop a simple game application based upon a classic card game called "Concentration". This game includes a set number of cards pairs. The premise of the game is for the user to match all of the pairs of the cards, using their memory - remembering the exact location of a card in order to match it to its pair. 
+I decided to develop a simple game application based upon a classic card game called "Concentration". This game includes a set number of card pairs. The premise of the game is for the user to match all of the pairs of the cards, using their memory - remembering the exact location of a card in order to match it to its pair. 
 
 The game starts, with the user presented with all the cards facing downward, and will begin by flipping one card and revealing the identity of this card and then flipping over another card to check if the cards match. If the cards match they remain flipped, if they do not match the cards flip back to the starting poisition and you continue with the game, trying to reveal matches. 
 
@@ -11,7 +11,7 @@ A live demo can be found at [here!](https://sje-1.github.io/Memory-Memory/)
  
 ## UX
  
-The premise of this game is simple and I also wanted to ensure that the design of the game matched the games philosophy. I wanted to ensure that the users were never overloaded with too much information or design. I did not want anything to distract from the main objective; to play the game. I decided to place an image and repeat it in the background to add some texture to the overall design. I wanted the game board to stand out so I decided a blue colour for the cards when they were faced down. I wanted to bring some colour into the game, so opted for white cards with colour dots. When the cards were matched they would turn white, providing feedback to the user of their progress. I also provided feedback to the user after each selection. 
+The premise of this game is simple and I also wanted to ensure that the design of the game matched the games philosophy. I wanted to ensure that the users were never overloaded with too much information or design. I did not want anything to distract from the main objective; to play the game. I decided to place an image and repeat it in the background to add some texture to the overall design. I wanted the game board to stand out so I decided a blue colour for the cards when they were faced down. I wanted to bring some colour into the game, so opted for white cards with colour dots. When the cards were matched they would turn white, providing feedback to the user of their progress. I also provided feedback to the user after each selection with pop up alerts. 
 
 ### UX - User objectives
 - As a game player I want to be able to play a game with a set number of cards, so that I can test my memory skills.
@@ -37,10 +37,11 @@ The premise of this game is simple and I also wanted to ensure that the design o
 [Memory Memory Game Wireframe](https://github.com/SJE-1/Memory-Memory/blob/0815b2e3e28d8b33e2e65b50f4716ff6fbb8c582/Wireframe/Memory%20Memory%20Game%20Wireframe.pdf)
 
 ## Features
-
+This game includes 16 cards which the user must match
+This game includes a shuffle feature to the cards 
 This game includes the option to play music. 
 The game also includes instructions and a restart button.
-This game includes a shuffle feature 
+
 
 ### Features Left to Implement
 - Adding different Levels to the game, by giving less time or by adding more cards
