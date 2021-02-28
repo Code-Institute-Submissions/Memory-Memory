@@ -30,7 +30,7 @@ body {
 }
 
 
-/*Align Time and Score*/
+/*Align buttons center*/
 
 .wrapper {
 	text-align: center;
@@ -91,7 +91,6 @@ body::after {
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 0.3em;
-	transform: perspective(1000%);
 }
 
 
@@ -107,27 +106,34 @@ body::after {
 	text-align: center;
 }
 
-@media (max-width: 575.98px) {
+
+/**** MEDIA QUERIES ****/
+
+
+/* Media Queries restyling elements for smaller devices such as iPad */
+
+@media (min-width: 1024px) and (max-width: 1920px) {
 	#title {
 		text-align: center;
 		color: azure;
-		font-size: 50px;
+		font-size: 80px;
+		padding-top: 20px;
+		padding-bottom: 50px;
 		transition: 1s;
 	}
-	.hide-when-narrow {
-		display: none;
-	}
+	/*Align buttons center*/
 	.wrapper {
 		text-align: center;
 	}
+	/*Style the buttons*/
 	.buttons {
-		size: 10px;
 		align-items: center;
 		position: relative;
 		color: azure;
 		background-color: rgb(67, 214, 37);
 		border: yellowgreen;
-		font-size: small;
+		font-size: x-large;
+		padding: 10px 10px;
 	}
 	/*Style the hover over button */
 	.buttons:hover {
@@ -135,18 +141,66 @@ body::after {
 	}
 	.score {
 		text-align: center;
+		font-size: 30px;
 		color: rgb(255, 255, 255);
+		padding: 10px;
 	}
 	/* Style the gameboard*/
 	.grid {
 		display: flex;
 		flex-wrap: wrap;
-		width: 200px;
-		height: 200px;
-		max-width: 100%;
+		width: 400px;
+		height: 400px;
+		max-width: 50%;
 		margin-left: auto;
 		margin-right: auto;
 		border-radius: 0.1em;
-		transform: perspective(1000%);
+		padding-top: 50px;
+	}
+	/**** MEDIA QUERIES ****/
+	/* Media Queries restyling elements for smaller devices such as mobile */
+	@media (max-width: 575.98px) {
+		#title {
+			text-align: center;
+			color: azure;
+			font-size: 50px;
+			transition: 1s;
+		}
+		/*hide header when the screen is small*/
+		.hide-when-narrow {
+			display: none;
+		}
+		/*Align buttons center*/
+		.wrapper {
+			text-align: center;
+		}
+		/*Style the buttons*/
+		.buttons {
+			align-items: center;
+			position: relative;
+			color: azure;
+			background-color: rgb(67, 214, 37);
+			border: yellowgreen;
+			font-size: small;
+		}
+		/*Style the hover over button */
+		.buttons:hover {
+			background-color: hotpink;
+		}
+		.score {
+			text-align: center;
+			color: rgb(255, 255, 255);
+		}
+		/* Style the gameboard*/
+		.grid {
+			display: flex;
+			flex-wrap: wrap;
+			width: 200px;
+			height: 200px;
+			max-width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			border-radius: 0.1em;
+		}
 	}
 }
