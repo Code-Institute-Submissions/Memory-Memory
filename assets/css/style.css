@@ -1,132 +1,152 @@
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
 /* reset applied */
+
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
+
+
 /* Set Body */
+
 body {
-  height: 100vh;
-  display: block;
-  background: black;
-  font-family: 'Rock Salt', cursive;
+	height: 100vh;
+	display: block;
+	background: black;
+	font-family: 'Rock Salt', cursive;
 }
+
+
 /*H1 Styling*/
+
 #title {
-    text-align: center;
-    color: azure;
-    padding: 20px;
-    font-size: 80px;
-    transition: 3s;
+	text-align: center;
+	color: azure;
+	padding: 20px;
+	font-size: 80px;
+	transition: 3s;
 }
 
 
 /*Align Time and Score*/
+
 .wrapper {
-    text-align: center;
+	text-align: center;
 }
+
+
 /*Style the buttons*/
-.buttons{
-    padding: 8px;
-    align-items: center;
-    position: relative;
-    color: azure;
-    background-color: rgb(67, 214, 37);
-    border: yellowgreen;
-    font-size: x-large;
+
+.buttons {
+	padding: 8px;
+	align-items: center;
+	position: relative;
+	color: azure;
+	background-color: rgb(67, 214, 37);
+	border: yellowgreen;
+	font-size: x-large;
 }
- /*Style the hover over button */
+
+
+/*Style the hover over button */
+
 .buttons:hover {
-  background-color: hotpink;
+	background-color: hotpink;
 }
+
+
 /*Style the score*/
+
 .score {
-    text-align: center;
-    color: azure;
+	text-align: center;
+	color: azure;
 }
+
+
 /*placement of the background image*/
+
 body::after {
-  content: '';
-  background: url('/assets/img/design.png');
-  opacity: 0.1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
+	content: '';
+	background: url('/assets/img/design.png');
+	opacity: 0.1;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
 }
-/* Style the gameboard - creates the gird of cards*/ 
+
+
+/* Style the gameboard - creates the gird of cards*/
+
 .grid {
-  display: flex;
-  flex-wrap: wrap;
-  width: 400px;
-  height: 400px;
-  max-width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 0.3em;
-  transform: perspective(1000%);
+	display: flex;
+	flex-wrap: wrap;
+	width: 400px;
+	height: 400px;
+	max-width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0.3em;
+	transform: perspective(1000%);
 }
+
 
 /* Style the footer */
+
 #footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: whitesmoke;
-  color: black;
-  text-align: center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: whitesmoke;
+	color: black;
+	text-align: center;
 }
+
 @media (max-width: 575.98px) {
-
-#title {
-    text-align: center;
-    color: azure;
-    font-size: 50px;
-    transition: 1s;
-}
- .hide-when-narrow {
-    display: none;
-  }
-
-.wrapper {
-    text-align: center;
-}
-
-.buttons{
-    size: 10px;
-    align-items: center;
-    position: relative;
-    color: azure;
-    background-color: rgb(67, 214, 37);
-    border: yellowgreen;
-    font-size: small;
-}
- /*Style the hover over button */
-.buttons:hover {
-  background-color: hotpink;
-}
-
-.score {
-    text-align: center;
-    color: rgb(255, 255, 255);
-  
-}
-
-/* Style the gameboard*/ 
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  width: 200px;
-  height: 200px;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 0.1em;
-  transform: perspective(1000%);
-}
+	#title {
+		text-align: center;
+		color: azure;
+		font-size: 50px;
+		transition: 1s;
+	}
+	.hide-when-narrow {
+		display: none;
+	}
+	.wrapper {
+		text-align: center;
+	}
+	.buttons {
+		size: 10px;
+		align-items: center;
+		position: relative;
+		color: azure;
+		background-color: rgb(67, 214, 37);
+		border: yellowgreen;
+		font-size: small;
+	}
+	/*Style the hover over button */
+	.buttons:hover {
+		background-color: hotpink;
+	}
+	.score {
+		text-align: center;
+		color: rgb(255, 255, 255);
+	}
+	/* Style the gameboard*/
+	.grid {
+		display: flex;
+		flex-wrap: wrap;
+		width: 200px;
+		height: 200px;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 0.1em;
+		transform: perspective(1000%);
+	}
 }
