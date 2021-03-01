@@ -68,8 +68,8 @@ body {
 /*placement of the background image*/
 
 body::after {
-	content: '';
-	background: url('/workspace/Memory-Memory/assets/img/design.png');
+	content: ''; 
+	background: url('../img/design.png');
 	opacity: 0.1;
 	top: 0;
 	left: 0;
