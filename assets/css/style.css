@@ -69,7 +69,7 @@ body {
 
 body::after {
 	content: '';
-	background: url('/assets/img/design.png');
+	background: url('/workspace/Memory-Memory/assets/img/design.png');
 	opacity: 0.1;
 	top: 0;
 	left: 0;
