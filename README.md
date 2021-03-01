@@ -34,7 +34,7 @@ The premise of this game is simple and I also wanted to ensure that the design o
 6. User selects another card - if the cards match, the cards remain flipped and turn white. If the cards to not match, the cards flip back to starting position and the games resumes. 
 7. Continue with steps 5 and 6 until all cards are matched 
 
-[Memory Memory Game Wireframe](https://github.com/SJE-1/Memory-Memory/blob/0815b2e3e28d8b33e2e65b50f4716ff6fbb8c582/Wireframe/Memory%20Memory%20Game%20Wireframe.pdf)
+[Memory Memory Game Wireframe](https://github.com/SJE-1/Memory-Memory/blob/0e937301f5c6ade4fa3c2c282d2d568c6055655c/Wireframe/Memory%20Memory%20Game%20Wireframe.pdf)
 
 ## Features
 This game includes 16 cards which the user must match
@@ -68,9 +68,9 @@ The website was also tested on an Apple 6 smartphone, MOTO smartphone, Apple Mac
 
 Below is an example of how the website looks on two different browsers and at two different sizes. The website is performing well across all platforms. The game works better at desktop level and also on the iPad in a horizontal poisition.
 
-[Memory Memory Wireframe iPad](https://github.com/SJE-1/Memory-Memory/blob/0815b2e3e28d8b33e2e65b50f4716ff6fbb8c582/Wireframe/Memory%20Memory%20-%20iPad%20Example.png)
+[Memory Memory Wireframe iPad](https://github.com/SJE-1/Memory-Memory/blob/0e937301f5c6ade4fa3c2c282d2d568c6055655c/Wireframe/Memory%20Memory%20-%20iPad%20Example.png)
 
-[Memory Memory Wireframe iPhone5](https://github.com/SJE-1/Memory-Memory/blob/0815b2e3e28d8b33e2e65b50f4716ff6fbb8c582/Wireframe/Memory%20Memory%20Game%20-%20iPhone%205%20.png)
+[Memory Memory Wireframe iPhone5](https://github.com/SJE-1/Memory-Memory/blob/0e937301f5c6ade4fa3c2c282d2d568c6055655c/Wireframe/Memory%20Memory%20Game%20-%20iPhone%205%20.png)
 
 
 The developer tools in the Chrome browser were especially useful for identifying any issues with the JavaScript code. I was able to see where I had name some of the png files wrong which was stopping the code matching the corect cards. 
