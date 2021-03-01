@@ -16,7 +16,9 @@ The premise of this game is simple and I also wanted to ensure that the design o
 ### UX - User objectives
 - As a game player I want to be able to play a game with a set number of cards, so that I can test my memory skills.
 - As a user I want to be able to flip reveal the cards to be able to match them 
-- So that the user can improve and test their memory
+- As a user, I might want to play some music and play the game
+- As a user, I want to know how to play the game
+- As a user, I want to reset/restart the game
 
 ### UX - User Scenario
 
